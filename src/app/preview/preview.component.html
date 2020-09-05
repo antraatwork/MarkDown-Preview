@@ -1,0 +1,13 @@
+<!-- loader before the new preview window displays-->
+<div id="loader"></div>
+
+<!-- for new preview in new window  -->
+<iframe id="preview" srcdoc="{{values}}" style="display: none;">
+  {{values}}
+</iframe>
+
+<!-- for toastr  -->
+<div id="toastr" style="display: none;">
+  Preview Window Opened
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>

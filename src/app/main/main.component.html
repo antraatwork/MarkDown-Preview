@@ -1,0 +1,60 @@
+<!-- loader before the  app  displays-->
+<div id="loader"></div>
+
+<!-- application view on main page -->
+<div id="fullbody" style="display: none;">
+
+    <div class="header">
+
+        <!-- <div class="appname"> -->
+        Markdown Preview
+
+
+    </div>
+
+    <!-- frame div in which editor ,preview button and the preview is -->
+    <div class="frame">
+
+        <!-- div for  button and editor -->
+        <div class="editorcontainer">
+            <button (click)="clickLink()">
+                Preview
+            </button>
+            <div>Editor</div>
+            <textarea autofocus id="editor" (keyup)="updatePreview($event) ">
+              {{input}}
+        </textarea>
+
+        </div>
+
+        <!-- div for preview and html  -->
+        <div class="previewcontainer">
+
+            <!-- options for html or preview -->
+            <div class="options">
+                <select id="viewoption" [(ngModel)]="optionvalue">
+                    <option value="preview">Preview</option>
+                    <option value="html">HTML</option>
+                </select>
+
+            </div>
+            <div class="preview">
+                <!-- acc. to chosen option preview or html will be displayed in div -->
+                <iframe *ngIf="optionvalue == 'preview'" srcdoc="{{values}}">
+                    {{values}}
+
+                </iframe>
+
+                <textarea *ngIf="optionvalue == 'html'">
+                {{values}}
+            </textarea>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

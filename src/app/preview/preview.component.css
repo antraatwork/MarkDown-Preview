@@ -1,0 +1,83 @@
+
+/* for large screen  */
+@media only screen and (max-width:1500px) and (min-width:700px){
+
+    iframe{
+    
+        width: 100%;
+        height:100vh;
+        overflow: visible;
+    
+    }
+
+
+} 
+
+/* for small screen */
+@media only screen and (max-width:700px) {
+
+    iframe{
+    
+        width: 100%;
+        height:100vh;
+        overflow: visible;
+    
+    }
+
+}  
+
+/* for loader before preview displays */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid  rgb(255, 208, 0);
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+  }
+
+  
+@keyframes spin {
+    
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+
+  }
+
+  /* for toastr  */
+  #toastr{
+
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    height:65px;
+    width:220px;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    justify-content: center;
+    border-radius:10px;
+    
+  }
+
+/* for close btn on toastr to close the notification */
+  .closebtn {
+    
+    color: white;
+    font-weight: bold;
+    font-size: 22px; 
+    cursor: pointer;
+
+}
+
+/* whenver you will hoverover the close button it will change 
+color to black */
+  .closebtn:hover {
+    color: black;
+  }

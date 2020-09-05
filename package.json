@@ -19,6 +19,12 @@
     "@angular/platform-browser": "~10.0.9",
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
+    "@types/marked": "^1.1.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "marked": "^1.1.1",
+    "ng-http-loader": "^8.0.0",
+    "ngx-toastr": "^13.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
