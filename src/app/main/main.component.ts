@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 //marked package to change inputs to html
 import * as marked from 'marked';
@@ -10,7 +10,7 @@ import * as marked from 'marked';
   styleUrls: ['./main.component.css']
 })
 
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit,OnDestroy{
 
   constructor(public router: Router, public route: ActivatedRoute) { }
 
@@ -110,14 +110,26 @@ export class MainComponent implements OnInit {
     //everytime this component initializes then the loader method is invoked 
     this.loader();
 
+     
     //get the this.input as parsed value from localstorage's defaultinput.
+    if(localStorage.getItem('defaultinput') == undefined ){
+       console.log("hiii");
+       localStorage.setItem('defaultinput', JSON.stringify(this.defaultinput));
+
+    }
     this.input = JSON.parse(localStorage.getItem('defaultinput'));
-    localStorage.setItem('defaultinput', JSON.stringify(this.input));
+
+
     //this method in invoked to get the preview of this.input taken from localstorage,initially whenever the component 
     //loads
     this.initialPreview();
 
-
   }
 
+  ngOnDestroy(){
+
+    localStorage.setItem('defaultinput', JSON.stringify(this.input));
+
+
+  }
 }

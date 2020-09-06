@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 //marked package to change inputs to html
 import * as marked from 'marked';
 
@@ -8,7 +8,7 @@ import * as marked from 'marked';
   styleUrls: ['./preview.component.css']
 })
 
-export class PreviewComponent implements OnInit {
+export class PreviewComponent implements OnInit,OnDestroy {
 
   constructor() { }
 
@@ -86,12 +86,18 @@ export class PreviewComponent implements OnInit {
 
     //get the this.input as parsed value from localstorage's defaultinput.
     this.input = JSON.parse(localStorage.getItem('defaultinput'));
-    localStorage.setItem('defaultinput', JSON.stringify(this.input));
 
     //this method in invoked to get the preview of this.input taken from localstorage,initially whenever the component 
     //loads
     this.initialPreview();
 
+
+  }
+
+  ngOnDestroy(){
+    
+
+    localStorage.setItem('defaultinput', JSON.stringify(this.input));
 
   }
 }
