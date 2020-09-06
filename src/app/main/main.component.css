@@ -79,7 +79,7 @@
         background-color: grey;
         resize:none;
         border: none;
-        cursor: auto;
+        cursor: default;
         overflow-x: visible;
         overflow-y:scroll;
         justify-self: center;
@@ -212,7 +212,7 @@
         background-color: grey;
         resize: none;
         border: none;
-        cursor: auto;
+        cursor: default;
         overflow-x: visible;
         overflow-y: scroll;
         justify-self: center;
