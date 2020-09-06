@@ -75,7 +75,7 @@
     .editorcontainer > textarea{
     
         width: 90%;
-        height:80vh;
+        height:82vh;
         background-color: grey;
         resize:none;
         border: none;
@@ -94,12 +94,12 @@
     .previewcontainer > .preview{
     
         width: 90%;
-        height:80vh;
+        height:82vh;
         resize: none;
         text-align: left;
         border:none;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow-x:auto;
+        overflow-y:auto;
         justify-self: center;
         border-width:2px;
         border-style: solid;
@@ -116,6 +116,8 @@
         height:80vh;
         border:none;
         resize: none;
+        overflow-x:auto;
+        overflow-y:auto;
 
     } 
 
@@ -125,6 +127,8 @@
         height:80vh;
         border:none;
         resize: none;
+        overflow-y:scroll;
+        overflow-x: scroll;
 
     }
 
@@ -232,8 +236,8 @@
         resize: none;
         text-align: left;
         border:none;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow-x: auto;
+        overflow-y: auto;
         justify-self: center;
         border-width:2px;
         border-style: solid;
@@ -252,6 +256,8 @@
         height:80vh;
         border:none;
         resize: none;
+        overflow-y:auto;
+        overflow-x: auto;
 
     } 
 
@@ -261,6 +267,8 @@
         height:80vh;
         border:none;
         resize: none;
+        overflow-y:auto;
+        overflow-x: auto;
 
     }
 

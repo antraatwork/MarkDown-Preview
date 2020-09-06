@@ -11,7 +11,7 @@ const defaultUserString : string =
   > h1 in blockquote
   ===   
 
-  [url]: /http://www.github.com/
+  [url](https://marked.js.org/)
 
   **This is strong**
 
@@ -28,7 +28,7 @@ const defaultUserString : string =
   <dd>Is something people use sometimes.</dd>
   </dl>  
 
-  <img src="../../assets/images/smile.jpg" title="*"/>
+  <img src="../../assets/images/tweety.jpg" title="*"/>
 
   
   
