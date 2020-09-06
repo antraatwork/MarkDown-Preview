@@ -11,7 +11,7 @@
     padding-bottom: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-
+    
 }
 /* for large screen */
 @media only screen and (max-width:1500px) and (min-width:700px){
@@ -79,7 +79,7 @@
         background-color: grey;
         resize:none;
         border: none;
-        cursor: pointer;
+        cursor: auto;
         overflow-x: visible;
         overflow-y:scroll;
         justify-self: center;
@@ -212,7 +212,7 @@
         background-color: grey;
         resize: none;
         border: none;
-        cursor: pointer;
+        cursor: auto;
         overflow-x: visible;
         overflow-y: scroll;
         justify-self: center;

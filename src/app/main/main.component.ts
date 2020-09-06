@@ -2,7 +2,13 @@ import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 //marked package to change inputs to html
 import * as marked from 'marked';
+import defaultUserString from '../constants';
 
+// If breaks is true, it will add <br> on a single line break
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+})
 
 @Component({
   selector: 'app-main',
@@ -33,41 +39,8 @@ export class MainComponent implements OnInit,OnDestroy{
   public values: string;
 
   //default input in editor
-  public defaultinput: string =
-    `
-   - Item1
-   - Item2
-        - Item2a
-        - Item2b
-        
-     ### This is h3 tag
-     ## This is h2 tag
-     # This is h1 tag
-     > h1 in blockquote
-     ===   
-
-     [url]: /http://www.github.com/
-
-     **This is strong**
-
-     *This is italic*
-
-     ~~~
-     Code
-     ~~~
-         Code
-
-     \`this is code block\`    
-     <dl>
-     <dt>Definition list</dt>
-     <dd>Is something people use sometimes.</dd>
-     </dl>  
-
-     <img src="../../assets/images/smile.jpg" title="*"/>
-
-     
-     
-  `;
+  public defaultinput: string = defaultUserString;
+   
   //input in the editor
   public input: string;
 

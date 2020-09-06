@@ -78,6 +78,7 @@
 
 /* whenver you will hoverover the close button it will change 
 color to black */
+
   .closebtn:hover {
     color: black;
   }
