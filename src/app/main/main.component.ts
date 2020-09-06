@@ -112,7 +112,7 @@ export class MainComponent implements OnInit,OnDestroy{
 
      
     //get the this.input as parsed value from localstorage's defaultinput.
-    if(localStorage.getItem('defaultinput') == undefined ){
+    if(localStorage.getItem('defaultinput') == undefined || localStorage.getItem('defaultinput') == " "){
        console.log("hiii");
        localStorage.setItem('defaultinput', JSON.stringify(this.defaultinput));
 
