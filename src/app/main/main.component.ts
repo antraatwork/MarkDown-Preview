@@ -1,10 +1,11 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-//marked package to change inputs to html
+//marked library to change inputs to html
 import * as marked from 'marked';
+//import defaultinput from constants.ts
 import defaultUserString from '../constants';
 
-// If breaks is true, it will add <br> on a single line break
+// If breaks and gfm is true, it will add <br> on a single line break
 marked.setOptions({
   gfm: true,
   breaks: true,
@@ -49,7 +50,7 @@ export class MainComponent implements OnInit,OnDestroy{
 
 
   //updatePreview invokes whenever is keyup event happens and this.input has the value from the target ,updates the
-  //localstorage's defaultinput and then this.input is changed to html using marked package and stored in this.values
+  //localstorage's defaultinput and then this.input is changed to html using marked library and stored in this.values
   public updatePreview(event) {
 
     this.input = event.target.value;
@@ -62,7 +63,7 @@ export class MainComponent implements OnInit,OnDestroy{
 
   }
 
-  //this method invokes everytime on ngOnInit() and the this.input is changed to html using marked package
+  //this method invokes everytime on ngOnInit() and the this.input is changed to html using marked library
   public initialPreview() {
 
     this.values = marked(this.input);

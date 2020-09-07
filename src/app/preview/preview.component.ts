@@ -1,6 +1,7 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
-//marked package to change inputs to html
+//marked library to change inputs to html
 import * as marked from 'marked';
+//import defaultinput from constants.ts
 import defaultUserString from '../constants';
 
 
@@ -23,7 +24,7 @@ export class PreviewComponent implements OnInit,OnDestroy {
   //input in the editor
   public input: string;
 
-  //this method invokes everytime on ngOnInit() and the this.input is changed to html using marked package
+  //this method invokes everytime on ngOnInit() and the this.input is changed to html using marked library
   public initialPreview() {
 
     this.values = marked(this.input);
